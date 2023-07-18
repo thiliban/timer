@@ -6,7 +6,8 @@ const timer = function(times) {
         const timeInNumbers = Number(time);
         setTimeout(() => {
             console.log(`Beeps at ${timeInNumbers} seconds`);
-            processstdout.write('\x07');
+            process.stdout.write('\x07');
         }, timeInNumbers * 1000);
     }
-}
+};
+console.log(timer([10,5,6,7,9]));
